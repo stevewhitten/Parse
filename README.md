@@ -1,2 +1,2 @@
 # Parse
-Predicts domain level structure from the protein primary sequence.
+Predicts protein regions that are disordered, and which subset of those can undergo phase separation.
