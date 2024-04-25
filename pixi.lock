@@ -1,0 +1,333 @@
+version: 4
+environments:
+  default:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge/
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/binutils_impl_linux-64-2.36.1-h193b22a_2.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/binutils_linux-64-2.36-hf3e587d_1.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/gcc-11.1.0-hee54495_1.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/gcc_impl_linux-64-11.1.0-h6b5115b_8.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/gcc_linux-64-11.1.0-h97fdae6_1.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/gfortran-11.1.0-h0c97300_1.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/gfortran_impl_linux-64-11.1.0-hc0c744c_8.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/gfortran_linux-64-11.1.0-h199678c_1.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/noarch/kernel-headers_linux-64-2.6.32-he073ed8_17.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.36.1-hea4e1c9_2.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libgcc-devel_linux-64-11.1.0-h80e7780_8.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-13.2.0-hc881cc4_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libgfortran5-13.2.0-h43f5ff8_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libgomp-13.2.0-hc881cc4_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libsanitizer-11.1.0-h56837e0_8.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-13.2.0-h95c4c6d_6.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/sysroot_linux-64-2.12-he073ed8_17.conda
+packages:
+- kind: conda
+  name: _libgcc_mutex
+  version: '0.1'
+  build: conda_forge
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
+  sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
+  md5: d7c89558ba9fa0495403155b64376d81
+  license: None
+  size: 2562
+  timestamp: 1578324546067
+- kind: conda
+  name: _openmp_mutex
+  version: '4.5'
+  build: 2_gnu
+  build_number: 16
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
+  sha256: fbe2c5e56a653bebb982eda4876a9178aedfc2b545f25d0ce9c4c0b508253d22
+  md5: 73aaf86a425cc6e73fcf236a5a46396d
+  depends:
+  - _libgcc_mutex 0.1 conda_forge
+  - libgomp >=7.5.0
+  constrains:
+  - openmp_impl 9999
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 23621
+  timestamp: 1650670423406
+- kind: conda
+  name: binutils_impl_linux-64
+  version: 2.36.1
+  build: h193b22a_2
+  build_number: 2
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/binutils_impl_linux-64-2.36.1-h193b22a_2.tar.bz2
+  sha256: 7cdcbb78f3b521efbcbd72424fb56a4e030001cccf2a6bca800aef4b9a5ed93a
+  md5: 32aae4265554a47ea77f7c09f86aeb3b
+  depends:
+  - ld_impl_linux-64 2.36.1 hea4e1c9_2
+  - sysroot_linux-64
+  license: GPL-3.0-only
+  license_family: GPL
+  size: 10940477
+  timestamp: 1627433692372
+- kind: conda
+  name: binutils_linux-64
+  version: '2.36'
+  build: hf3e587d_1
+  build_number: 1
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/binutils_linux-64-2.36-hf3e587d_1.tar.bz2
+  sha256: 8aa57fc69136fcd6b34e296e863290bbf4f2c9d81fadc5eb53d01d1ba7a4e777
+  md5: 7d750bafc3cc7121170387583ecf0ff1
+  depends:
+  - binutils_impl_linux-64 2.36.*
+  - sysroot_linux-64
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 23655
+  timestamp: 1630912020049
+- kind: conda
+  name: gcc
+  version: 11.1.0
+  build: hee54495_1
+  build_number: 1
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/gcc-11.1.0-hee54495_1.tar.bz2
+  sha256: 2ef299addb22adce7d928bed532e3b86c99e47e85a2ab65d04bbb876c49888a9
+  md5: cfbfddf02347b93c9f9c8595b36a1be8
+  depends:
+  - gcc_impl_linux-64 11.1.0.*
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 23881
+  timestamp: 1630912113140
+- kind: conda
+  name: gcc_impl_linux-64
+  version: 11.1.0
+  build: h6b5115b_8
+  build_number: 8
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/gcc_impl_linux-64-11.1.0-h6b5115b_8.tar.bz2
+  sha256: 0e061b1b4b7a2cf4da60e2614648de1606da4bb4f6376f0b286884e660cfe5ee
+  md5: c0e6e3257f2216fabb4fdfe2f0fc24a3
+  depends:
+  - binutils_impl_linux-64 2.36.1.*
+  - libgcc-devel_linux-64 11.1.0 h80e7780_8
+  - libgcc-ng >=11.1.0
+  - libgomp >=11.1.0
+  - libsanitizer 11.1.0 h56837e0_8
+  - libstdcxx-ng >=11.1.0
+  - sysroot_linux-64
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 54318078
+  timestamp: 1628139969798
+- kind: conda
+  name: gcc_linux-64
+  version: 11.1.0
+  build: h97fdae6_1
+  build_number: 1
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/gcc_linux-64-11.1.0-h97fdae6_1.tar.bz2
+  sha256: 5d157f1d17e4939bbd3fe32fb9072f5a21772f019c09fd223f580af7af67830c
+  md5: d2fac0eb12a3ee78ba5924cfd47840a3
+  depends:
+  - binutils_linux-64 2.36 hf3e587d_1
+  - gcc_impl_linux-64 11.1.0.*
+  - sysroot_linux-64
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 24256
+  timestamp: 1630912289111
+- kind: conda
+  name: gfortran
+  version: 11.1.0
+  build: h0c97300_1
+  build_number: 1
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/gfortran-11.1.0-h0c97300_1.tar.bz2
+  sha256: 7de1ad5b91e56abcb31cbaeb948b712498044105d0a598dbc3495c5a9a959a89
+  md5: 700835db4cbde33c7cc233024bdf7aef
+  depends:
+  - gcc 11.1.0.*
+  - gfortran_linux-64 11.1.0.*
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 23173
+  timestamp: 1630912369289
+- kind: conda
+  name: gfortran_impl_linux-64
+  version: 11.1.0
+  build: hc0c744c_8
+  build_number: 8
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/gfortran_impl_linux-64-11.1.0-hc0c744c_8.tar.bz2
+  sha256: 9d9d64ecfb393402d4740521fe150c34a07d371e8adf35b422d9b21ba426cbf9
+  md5: 82004dc1d8aaca1f3b40775f68358686
+  depends:
+  - gcc_impl_linux-64 >=11.1.0
+  - libgcc-ng >=11.1.0
+  - libgcc-ng >=4.9
+  - libgfortran5 >=11.1.0
+  - libstdcxx-ng >=4.9
+  - sysroot_linux-64
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 12052813
+  timestamp: 1628140079095
+- kind: conda
+  name: gfortran_linux-64
+  version: 11.1.0
+  build: h199678c_1
+  build_number: 1
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/gfortran_linux-64-11.1.0-h199678c_1.tar.bz2
+  sha256: 234bdcf525d3e6c93af6ad3e79a5e59563d5001782ded3939e6b49f315815b93
+  md5: 273862d35420d46bbd2ab93b76a53f5f
+  depends:
+  - binutils_linux-64 2.36 hf3e587d_1
+  - gcc_linux-64 11.1.0 h97fdae6_1
+  - gfortran_impl_linux-64 11.1.0.*
+  - sysroot_linux-64
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 23963
+  timestamp: 1630912338990
+- kind: conda
+  name: kernel-headers_linux-64
+  version: 2.6.32
+  build: he073ed8_17
+  build_number: 17
+  subdir: noarch
+  noarch: generic
+  url: https://conda.anaconda.org/conda-forge/noarch/kernel-headers_linux-64-2.6.32-he073ed8_17.conda
+  sha256: fb39d64b48f3d9d1acc3df208911a41f25b6a00bd54935d5973b4739a9edd5b6
+  md5: d731b543793afc0433c4fd593e693fce
+  constrains:
+  - sysroot_linux-64 ==2.12
+  license: LGPL-2.0-or-later AND LGPL-2.0-or-later WITH exceptions AND GPL-2.0-or-later AND MPL-2.0
+  license_family: GPL
+  size: 710627
+  timestamp: 1708000830116
+- kind: conda
+  name: ld_impl_linux-64
+  version: 2.36.1
+  build: hea4e1c9_2
+  build_number: 2
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.36.1-hea4e1c9_2.tar.bz2
+  sha256: ad7985a9ff622880cf87c42db1ffe2dfb040d8175c1bb352fc8f3705c7e0962f
+  md5: bd4f2e711b39af170e7ff15163fe87ee
+  constrains:
+  - binutils_impl_linux-64 2.36.1
+  license: GPL-3.0-only
+  license_family: GPL
+  size: 683488
+  timestamp: 1627433673670
+- kind: conda
+  name: libgcc-devel_linux-64
+  version: 11.1.0
+  build: h80e7780_8
+  build_number: 8
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-devel_linux-64-11.1.0-h80e7780_8.tar.bz2
+  sha256: 325e2b76d436bb3efcfe66b07eeafb1d1119eca5722127f12bbabc1ae0e76c10
+  md5: 8f072f8c90b4d2d672db6d4aae05d6ef
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 3442898
+  timestamp: 1628139708007
+- kind: conda
+  name: libgcc-ng
+  version: 13.2.0
+  build: hc881cc4_6
+  build_number: 6
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-13.2.0-hc881cc4_6.conda
+  sha256: 836a0057525f1414de43642d357d0ab21ac7f85e24800b010dbc17d132e6efec
+  md5: df88796bd09a0d2ed292e59101478ad8
+  depends:
+  - _libgcc_mutex 0.1 conda_forge
+  - _openmp_mutex >=4.5
+  constrains:
+  - libgomp 13.2.0 hc881cc4_6
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 777315
+  timestamp: 1713755001744
+- kind: conda
+  name: libgfortran5
+  version: 13.2.0
+  build: h43f5ff8_6
+  build_number: 6
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgfortran5-13.2.0-h43f5ff8_6.conda
+  sha256: 5da2abd9e2c09ec8566fbacb237926b532f6629871ff2733c90a0be77b77679e
+  md5: e54a5ddc67e673f9105cf2a2e9c070b0
+  depends:
+  - libgcc-ng >=13.2.0
+  constrains:
+  - libgfortran-ng 13.2.0
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 1442624
+  timestamp: 1713755021286
+- kind: conda
+  name: libgomp
+  version: 13.2.0
+  build: hc881cc4_6
+  build_number: 6
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgomp-13.2.0-hc881cc4_6.conda
+  sha256: e722b19b23b31a14b1592d5eceabb38dc52452ff5e4d346e330526971c22e52a
+  md5: aae89d3736661c36a5591788aebd0817
+  depends:
+  - _libgcc_mutex 0.1 conda_forge
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 422363
+  timestamp: 1713754915251
+- kind: conda
+  name: libsanitizer
+  version: 11.1.0
+  build: h56837e0_8
+  build_number: 8
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libsanitizer-11.1.0-h56837e0_8.tar.bz2
+  sha256: b59987c54ab5fa0bdb16656794c8d4087a0d870ca5594d1822170b9736c65192
+  md5: 1d2f9c0c9451ae09a055b5ca6a2a5b03
+  depends:
+  - libgcc-ng >=11.1.0
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 6164630
+  timestamp: 1628139873528
+- kind: conda
+  name: libstdcxx-ng
+  version: 13.2.0
+  build: h95c4c6d_6
+  build_number: 6
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-13.2.0-h95c4c6d_6.conda
+  sha256: 2616dbf9d28431eea20b6e307145c6a92ea0328a047c725ff34b0316de2617da
+  md5: 3cfab3e709f77e9f1b3d380eb622494a
+  license: GPL-3.0-only WITH GCC-exception-3.1
+  license_family: GPL
+  size: 3842900
+  timestamp: 1713755068572
+- kind: conda
+  name: sysroot_linux-64
+  version: '2.12'
+  build: he073ed8_17
+  build_number: 17
+  subdir: noarch
+  noarch: generic
+  url: https://conda.anaconda.org/conda-forge/noarch/sysroot_linux-64-2.12-he073ed8_17.conda
+  sha256: b4e4d685e41cb36cfb16f0cb15d2c61f8f94f56fab38987a44eff95d8a673fb5
+  md5: 595db67e32b276298ff3d94d07d47fbf
+  depends:
+  - kernel-headers_linux-64 2.6.32 he073ed8_17
+  license: LGPL-2.0-or-later AND LGPL-2.0-or-later WITH exceptions AND GPL-2.0-or-later AND MPL-2.0
+  license_family: GPL
+  size: 15127123
+  timestamp: 1708000843849

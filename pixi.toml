@@ -1,0 +1,17 @@
+[project]
+name = "Parse"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Steve Whitten"]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+compile = "gfortran Parse.f"
+predict = {cmd = "./a.out", depends_on = "compile"}
+
+[dependencies]
+gfortran = "11.1.0.*"
+
+[system-requirements]
+linux="4.18"
